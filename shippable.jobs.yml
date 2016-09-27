@@ -4,22 +4,22 @@ jobs:
 
 
 # manifest gen for VISUALIZER
-  - name: dv-man
+  - name: dv-man1
     type: manifest
     steps:
-      - IN: dv-img
-      - IN: dv-img-opts
+      - IN: dv-img1
+      - IN: dv-img-opts1
       - TASK: managed
 
 #/ manifest gen for VISUALIZER
 
 # TEST deployment for VISUALIZER to Amazon ECS
-  - name: dv-test-ecs
+  - name: dv-test-ecs1
     type: deploy
     steps:
-      - IN: dv-man
+      - IN: dv-man1
 #      - IN: dv-params
-      - IN: env-test-ecs
+      - IN: env-test-ecs1
       - TASK: managed
 
 # / TEST deployment for VISUALIZER to Amazon ECS

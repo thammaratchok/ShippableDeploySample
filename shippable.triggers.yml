@@ -1,5 +1,5 @@
 triggers:
-  - name: dv-trigger
+  - name: dv-trigger1
     type: trigger
     version:
       counter: 3
